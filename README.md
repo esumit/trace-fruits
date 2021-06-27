@@ -2,7 +2,7 @@
 
 ###### About 
 
-![Fruits](/images/Fruits_1896737.png) ![Traceability](/images/Traceability_2068763.png)
+![Traceability](/images/Traceability_2068763.png) ![Fruits](/images/Fruits_1896737.png) 
 
 Trace fruits is a conceptual demo to visualise fruits supply chain events stored in an immutable ledger.  It uses splunk to analyse 
 generated data from hyperledger-fabric's blockchain ledgers.
