@@ -1,0 +1,52 @@
+<dashboard>
+  <label>About Trace Fruits</label>
+  <row>
+    <panel>
+      <html>
+        <center>
+          <img src="/static/app/Trace-Fruits-1/Fruits_1896737.png" width="15%"/>
+          <img src="/static/app/Trace-Fruits-1/Traceability_2068763.png" width="15%"/>
+        </center>
+      </html>
+    </panel>
+    <panel>
+      <html>
+       <center>
+          <br/>
+          <p>
+            <h1>Trace fruits is a conceptual demo to visualise fruits supply chain events txns stored in hyperledger fabric blockchain ledgers.</h1>
+          </p>
+           <p>
+            This demo concept picked from the GS1 global traceability standard, that provides guidelines on fresh fruit and vegetable traceability.
+          </p>
+        </center>
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <html>
+        <center>
+          <h1>
+            <a href="/app/Trace-Fruits-1/insight" target="_blank">Trace Fruits Ledgers Insight</a>
+          </h1>
+        </center>
+        <center>
+          <img src="/static/app/Trace-Fruits-1/Trace_Fruits_Ledger_Insights.png "/>
+        </center>
+      </html>
+    </panel>
+    <panel>
+      <html>
+        <center>
+          <h1>
+            <a href="/app/Trace-Fruits-1/trace_fruits_events_payloads" target="_blank">Trace Fruits Events Payload</a>
+          </h1>
+        </center>
+        <center>
+          <img src="/static/app/Trace-Fruits-1/Trace_Fruits_Events_Payloads.png "/>
+        </center>
+      </html>
+    </panel>
+  </row>
+</dashboard>

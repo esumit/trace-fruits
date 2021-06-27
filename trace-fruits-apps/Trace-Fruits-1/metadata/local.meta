@@ -1,0 +1,58 @@
+[app/ui]
+version = 8.2.0
+modtime = 1624778754.045466000
+
+[app/launcher]
+version = 8.2.0
+modtime = 1624778754.046917000
+
+[]
+access = read : [ * ], write : [ admin, can_delete, power, securegateway, splunk-system-role, user ]
+export = system
+version = 8.2.0
+modtime = 1624759820.233727000
+
+[app/package/check_for_updates]
+version = 8.2.0
+modtime = 1624778754.068337000
+
+[views/insight]
+access = read : [ * ], write : [ * ]
+export = none
+owner = admin
+version = 8.2.0
+modtime = 1624759865.691558000
+
+[macros/tracefruits_application_logs]
+access = read : [ * ], write : [ * ]
+export = system
+owner = admin
+version = 8.2.0
+modtime = 1624759879.255174000
+
+[macros/tracefruits_ledger_logs]
+access = read : [ * ], write : [ * ]
+export = system
+owner = admin
+version = 8.2.0
+modtime = 1624759887.540665000
+
+[nav/default]
+version = 8.2.0
+modtime = 1624776601.275731000
+
+[app/install/install_source_checksum]
+version = 8.2.0
+modtime = 1624771649.318432000
+
+[views/about]
+access = read : [ * ], write : [ admin, can_delete, power, securegateway, splunk-system-role, user ]
+export = system
+owner = admin
+version = 8.2.0
+modtime = 1624778855.167497000
+
+[views/trace_fruits_events_payloads]
+owner = admin
+version = 8.2.0
+modtime = 1624776704.957406000

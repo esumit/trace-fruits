@@ -1,0 +1,128 @@
+<dashboard theme="dark">
+  <label>Trace Fruits Ledgers</label>
+  <description>Insight of a demo fruits supply chain events, stored as blocks of transactions into an immutable ledger</description>
+  <row>
+    <panel>
+      <single>
+        <title>Fruits Traceability Events Stats</title>
+        <search>
+          <query>`tracefruits_application_logs`  OR `tracefruits_ledger_logs`  sourcetype="fabric_logger:endorser_transaction"
+| search chaincode_status=200 
+| stats dc(tx_id) as Count</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <refresh>5s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="drilldown">all</option>
+        <option name="rangeColors">["0x53a051","0xdc4e41"]</option>
+        <option name="rangeValues">[500000]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="useColors">1</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>FruitsProvider Ledger Blockchain Height</title>
+        <search>
+          <query>| mstats avg(_value) prestats=true WHERE metric_name="orderer2.example.com.ledger.blockchain_height.fruitsprovider" AND "index"="hyperledger_metrics" span=10s
+| timechart avg(_value) as "Avg" span=10s</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <refresh>5s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="numberPrecision">0</option>
+        <option name="rangeColors">["0x53a051","0x555","0xf8be34","0xf1813f","0xdc4e41"]</option>
+        <option name="rangeValues">[5000,6000,7000,10000]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="showSparkline">0</option>
+        <option name="showTrendIndicator">0</option>
+        <option name="unitPosition">after</option>
+        <option name="useColors">1</option>
+        <option name="useThousandSeparators">0</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>FruitsReceiver Ledger Blockchain Height</title>
+        <search>
+          <query>| mstats avg(_value) prestats=true WHERE metric_name="orderer2.example.com.ledger.blockchain_height.fruitsreceiver" AND "index"="hyperledger_metrics" span=10s
+| timechart avg(_value) as "Avg" span=10s</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <refresh>5s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x53a051","0xdc4e41"]</option>
+        <option name="rangeValues">[5000]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="showSparkline">0</option>
+        <option name="showTrendIndicator">0</option>
+        <option name="useColors">1</option>
+        <option name="useThousandSeparators">0</option>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Fruitsprovider Ledger Transaction Count</title>
+        <search>
+          <query>| mstats avg(_value) prestats=true WHERE metric_name="peer0.buttercup.example.com.ledger.transaction_count.fruitsprovider.ENDORSER_TRANSACTION.trace_fruits_cc_1_12.VALID" AND "index"="hyperledger_metrics" span=10s
+| timechart avg(_value) as "Avg" span=10s</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <refresh>5s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x53a051","0xdc4e41"]</option>
+        <option name="rangeValues">[5000]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="showSparkline">0</option>
+        <option name="showTrendIndicator">0</option>
+        <option name="useColors">1</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Fruitsreceiver Ledger Transaction Count</title>
+        <search>
+          <query>| mstats avg(_value) prestats=true WHERE metric_name="peer0.buttercup.example.com.ledger.transaction_count.fruitsreceiver.ENDORSER_TRANSACTION.trace_fruits_cc_1_12.VALID" AND "index"="hyperledger_metrics" span=10s
+| timechart avg(_value) as "Avg" span=10s</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <refresh>5s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x53a051","0xdc4e41"]</option>
+        <option name="rangeValues">[6000]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="showSparkline">0</option>
+        <option name="showTrendIndicator">0</option>
+        <option name="useColors">1</option>
+        <option name="useThousandSeparators">0</option>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <title>Transactions Logs</title>
+        <search>
+          <query>((index="hyperledger_logs") (sourcetype="docker:peer")) | fields "_time", "container_id", "line.msg"</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <refresh>5s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </table>
+    </panel>
+  </row>
+</dashboard>

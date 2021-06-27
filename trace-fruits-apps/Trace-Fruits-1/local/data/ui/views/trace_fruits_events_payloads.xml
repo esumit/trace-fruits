@@ -1,0 +1,25 @@
+<dashboard theme="dark">
+  <label>Trace Fruits Events Payloads</label>
+  <description>Trace Fruits Events Request Response on Blockchain Ledger</description>
+  <row>
+    <panel>
+      <table>
+        <title>Trace Fruits Payload Data Actions</title>
+        <search>
+          <query>chaincode_proposal_payload chaincode_response="*" tx_id="*" | fields "_time", "block_number", "payload.data.actions{}.payload.action.proposal_response_payload.extension.results.ns_rwset{}.rwset.writes{}.key", "chaincode_name", "payload.data.actions{}.payload.action.proposal_response_payload.extension.results.ns_rwset{}.rwset.writes{}.value", "chaincode_response", "channel", "payload.data.actions{}.payload.action.proposal_response_payload.extension.results.ns_rwset{}.namespace", "source", "tx_type"</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">true</option>
+        <option name="totalsRow">false</option>
+        <format type="color" field="payload.data.actions{}.payload.action.proposal_response_payload.extension.results.ns_rwset{}.rwset.writes{}.key">
+          <colorPalette type="map"></colorPalette>
+        </format>
+      </table>
+    </panel>
+  </row>
+</dashboard>

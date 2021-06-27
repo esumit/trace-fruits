@@ -1,0 +1,9 @@
+<nav search_view="search">
+  <view name="search" />
+  <collection label="Dashboards">
+    <view name="about" default='true' />
+    <view name="insight" />
+    <view name="trace_fruits_events_payloads"/>
+    <view name="dashboards" />
+  </collection>
+</nav>
