@@ -11,5 +11,27 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+.idea/
+
+
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# Emacs backup files
+*~
+*#
+.#*
+# Vim file artifacts
+.*.sw*
+# installed platform-specific binaries
+/bin
+/config
+.DS_Store
+.project
+
+*.block
+*.tx
+crypto
+node_modules
+package-lock.json
+fabric-samples

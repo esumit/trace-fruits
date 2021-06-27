@@ -5,7 +5,7 @@
 ![Fruits](/images/Fruits_1896737.png) ![Traceability](/images/Traceability_2068763.png)
 
 Trace fruits is a conceptual demo to visualise fruits supply chain events stored in an immutable ledger.  It uses splunk to analyse 
-generated data at hyperledger-fabric's blockchain ledgers.
+generated data from hyperledger-fabric's blockchain ledgers.
 
 
 This demo concept picked from the GS1 global traceability standard, that provides guidelines on fresh fruit and vegetable 
@@ -52,6 +52,22 @@ _harvesting-traceability event as stored in ledger_
 ````
 
 A trace-id is unique for set of product's supply chain events. 
+
+*How conceptually it works ?*
+
+- In every logical step of fruits supply chain, a fresh fruit supply chain event with unique trace-id got inserted into the blockchain ledger e.g.
+harvesting event or shipping event. This event contains most important logical information to identify and prove this 
+supply chain event.
+
+- The inserted unique trace-ids relates to a batch of fruits products, and that trace-id inserted on each and every event
+from start to finish of that batch of fruits products e.g. from harvesting to retail. 
+
+- A complete audit trail of events from start to finish can be queried from ledger via trace-id 
+
+- Individuals events can be queried from ledger 
+
+- events inserted along the way of supply chain 
+
 
 #### How To 
 
@@ -152,3 +168,5 @@ http://<ip address>:5984/_utils/
  - trace-fruits-apps contains trace-fruits splunk app available tar.gz, and a regular folder
  - trace-fruits chaincode available in trace-fruits-cc directory
  - trace-fruits-splunk-app.tar.gz also available in s3 https://trace-fruits.s3.ap-southeast-2.amazonaws.com/trace-fruits-splunk-app.tar.gz
+ - Audit trail query is not implemented yet
+ - Tar file of Trace-Fruits-1 doesn't work if created from mac,  
