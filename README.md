@@ -50,10 +50,14 @@ _harvesting-traceability event as stored in ledger_
   "~version": "\u0000CgMBBAA="
 }
 ````
-
 A trace-id is unique for set of product's supply chain events. 
 
-*How conceptually it works ?*
+#### Demo Recording
+
+https://tinyurl.com/trace-fruits-demo 
+
+
+####How conceptually it works ?
 
 - In every logical step of fruits supply chain, a fresh fruit supply chain event with unique trace-id got inserted into the blockchain ledger e.g.
 harvesting event or shipping event. This event contains most important logical information to identify and prove this 
@@ -170,3 +174,12 @@ http://<ip address>:5984/_utils/
  - trace-fruits-splunk-app.tar.gz also available in s3 https://trace-fruits.s3.ap-southeast-2.amazonaws.com/trace-fruits-splunk-app.tar.gz
  - Audit trail query is not implemented yet
  - Tar file of Trace-Fruits-1 doesn't work if created from mac,  
+ 
+ #### References 
+ 
+ - https://hyperledger-fabric.readthedocs.io/en/release-2.2/
+ - https://github.com/splunk/fabric-logger
+ - https://github.com/splunk/fabric-logger/tree/master/examples/vaccine-demo
+ - https://splunkbase.splunk.com/app/4605/
+ - https://www.splunkdlt.com/
+ 
