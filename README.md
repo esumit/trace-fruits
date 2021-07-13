@@ -57,7 +57,7 @@ A trace-id is unique for set of product's supply chain events.
 https://tinyurl.com/trace-fruits-demo 
 
 
-####How conceptually it works ?
+#### How conceptually it works ?
 
 - In every logical step of fruits supply chain, a fresh fruit supply chain event with unique trace-id got inserted into the blockchain ledger e.g.
 harvesting event or shipping event. This event contains most important logical information to identify and prove this 
