@@ -52,6 +52,10 @@ _harvesting-traceability event as stored in ledger_
 ````
 A trace-id is unique for set of product's supply chain events. 
 
+#### Tracefruit Blockchain Network
+
+![Tracefruit Blockchain Network](/images/Tracefruit-Blockchain-Network.jpg)
+
 #### Demo Recording
 
 https://tinyurl.com/trace-fruits-demo 
