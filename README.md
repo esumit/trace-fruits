@@ -14,8 +14,9 @@ This demo is inspired by the GS1 Global Traceability Standard, which provides gu
 - Transporting - The carrier arrives and loads the pallets onto the truck.
 - Receiving - The pallets arrive at the retailer or foodservice operator's distribution center.
 - Selling or Consumption - The products have arrived at the retail store and have been placed on the shelves.
-  
-![Tracefruit Context](/images/trace-fruits-blokchain.png)
+
+![Tracefruit WorkFlow](/images/trace-fruits-context-flow.png)
+
 
 By leveraging blockchain technology and data analysis, Trace Fruits aims to provide better transparency and traceability throughout the entire fruit supply chain process.
 _harvesting-traceability event as stored in ledger_
@@ -63,7 +64,7 @@ https://tinyurl.com/trace-fruits-demo
 
 #### How conceptually it works ?
 
-![Tracefruit WorkFlow](/images/trace-fruits-context-flow.png)
+![Tracefruit Context](/images/trace-fruits-blokchain.png)
 
 - At every logical step of the fruit supply chain, a fresh fruit supply chain event with a unique trace-id is inserted into the blockchain ledger (e.g., harvesting event or shipping event). This event contains crucial information to identify and verify the supply chain event.
 
