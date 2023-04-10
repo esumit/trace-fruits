@@ -4,20 +4,20 @@
 
 ![Traceability](/images/Traceability_2068763.png) ![Fruits](/images/Fruits_1896737.png) 
 
-Trace fruits is a conceptual demo to visualise fruits supply chain events stored in an immutable ledger.  It uses splunk to analyse 
-generated data from hyperledger-fabric's blockchain ledgers.
+Trace Fruits is a conceptual demo designed to visualize fruit supply chain events stored in an immutable ledger. It utilizes Splunk to analyze data generated from Hyperledger Fabric's blockchain ledgers.
 
+This demo is inspired by the GS1 Global Traceability Standard, which provides guidelines for fresh fruit and vegetable traceability. The major supply chain events for traceability include:
 
-This demo concept picked from the GS1 global traceability standard, that provides guidelines on fresh fruit and vegetable 
-traceability. It includes following major supply chain events for traceability : 
+- Harvesting - The producer harvests the crop and packs the products into cases.
+- Packing/Repacking - The packer/repacker transforms ungraded commodities into retail-ready products.
+- Shipping - The packer/repacker palletizes the cases of product.
+- Transporting - The carrier arrives and loads the pallets onto the truck.
+- Receiving - The pallets arrive at the retailer or foodservice operator's distribution center.
+- Selling or Consumption - The products have arrived at the retail store and have been placed on the shelves.
+  
+![Tracefruit Context](/images/trace-fruits-blokchain.png)
 
--  Harvesting - The producer harvests the crop and packs the products into in cases. 
--  Packing/Repacking - The packer/repacker transforms ungraded commodities into products. 
--  Shipping - The packer/repacker palletizes the cases of product.
--  Transporting - The carrier arrives and loads the pallets onto the truck. 
--  Receiving - The pallets arrive in the retailer or foodservice operator’s distribution centre.
--  Selling or Consumption - The products have arrived at the retail store and have been placed on the shelves.
-
+By leveraging blockchain technology and data analysis, Trace Fruits aims to provide better transparency and traceability throughout the entire fruit supply chain process.
 _harvesting-traceability event as stored in ledger_
  
 ````
@@ -63,18 +63,17 @@ https://tinyurl.com/trace-fruits-demo
 
 #### How conceptually it works ?
 
-- In every logical step of fruits supply chain, a fresh fruit supply chain event with unique trace-id got inserted into the blockchain ledger e.g.
-harvesting event or shipping event. This event contains most important logical information to identify and prove this 
-supply chain event.
+![Tracefruit WorkFlow](/images/trace-fruits-context-flow.png)
 
-- The inserted unique trace-ids relates to a batch of fruits products, and that trace-id inserted on each and every event
-from start to finish of that batch of fruits products e.g. from harvesting to retail. 
+- At every logical step of the fruit supply chain, a fresh fruit supply chain event with a unique trace-id is inserted into the blockchain ledger (e.g., harvesting event or shipping event). This event contains crucial information to identify and verify the supply chain event.
 
-- A complete audit trail of events from start to finish can be queried from ledger via trace-id 
+- The inserted unique trace-ids correspond to a batch of fruit products, and the trace-id is inserted for each event from start to finish for that batch of fruit products (e.g., from harvesting to retail).
 
-- Individuals events can be queried from ledger 
+- A complete audit trail of events from start to finish can be queried from the ledger using the trace-id.
 
-- events inserted along the way of supply chain 
+- Individual events can also be queried from the ledger.
+
+- Events are inserted along the supply chain process.
 
 
 #### How To 

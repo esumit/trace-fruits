@@ -1,0 +1,20 @@
+@startuml
+actor "Producer" as producer
+actor "Packer/\nRepacker" as packer
+actor "Carrier" as carrier
+actor "Retailer or\nFoodservice Operator" as retailer
+actor "End Consumer" as consumer
+
+database "Hyperledger Fabric\n(Blockchain)" as hyperledger
+
+producer -> hyperledger : Insert Harvesting Event
+packer -> hyperledger : Insert Packing/Repacking Event
+packer -> hyperledger : Insert Shipping Event
+carrier -> hyperledger : Insert Transporting Event
+retailer -> hyperledger : Insert Receiving Event
+consumer -> hyperledger : Query Event by Trace-ID
+
+note over hyperledger : Complete Audit Trail\nof Events
+note over hyperledger : Individual Events\nare Queryable
+
+@enduml

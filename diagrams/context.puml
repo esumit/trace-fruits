@@ -1,0 +1,23 @@
+@startuml
+
+actor "Producer" as producer
+actor "Packer/\nRepacker" as packer
+actor "Carrier" as carrier
+actor "Retailer or\nFoodservice Operator" as retailer
+actor "End Consumer" as consumer
+
+database "Hyperledger Fabric\n(Blockchain)" as hyperledger
+component "Splunk\n(Data Analysis)" as splunk
+
+producer --> hyperledger : Harvesting
+packer --> hyperledger : Packing/Repacking
+packer --> hyperledger : Shipping
+carrier --> hyperledger : Transporting
+retailer --> hyperledger : Receiving
+consumer --> hyperledger : Selling or Consumption
+
+hyperledger --> splunk : Supply Chain Data
+splunk --> consumer : Visualized Data
+
+@enduml
+
